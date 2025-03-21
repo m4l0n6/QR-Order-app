@@ -1,10 +1,11 @@
-import React from 'react'
+
+import UserPage from './pages/UserPage'
 
 function App() {
 
   return (
     <>
-     <h1 className='text-3xl text-red-400'>Hello guys</h1>
+      <UserPage />
     </>
   )
 }
