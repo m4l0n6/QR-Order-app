@@ -15,7 +15,7 @@ function UserPageMenu({menu, foodAddHandle, foodRemoveHandle ,totalItems, totalP
                 
             <div className='bg-white mb-4 p-4 text-center menu-header'>
                 <h1 className='mb-4 text-3xl'>Menu</h1>
-                <button className='px-4 py-2 border rounded-full text-xl' onClick={() => WebApp.showAlert("Đây là cái nút đấy")}>Click me</button>
+                <button className='bg-blue-500 px-4 py-2 border rounded-full text-white text-xl' onClick={() => WebApp.showAlert("Đây là cái nút đấy")}>Click me</button>
             </div>
 
             <div className="justify-center lg:px-32 menu-wrapper">
