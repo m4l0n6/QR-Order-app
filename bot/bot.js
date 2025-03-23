@@ -11,8 +11,7 @@ bot.start((ctx) => {
         {
             caption: `Chào mừng bạn đến với bot đặt món ăn! 🍔🍟🍕
             
-                    Để xem menu, hãy ấn vào nút bên dưới.
-            `,
+👉 Để xem menu, hãy ấn vào nút bên dưới.`,
             parse_mode: "Markdown",
             reply_markup: Markup.inlineKeyboard([
                 [Markup.button.callback("Xem menu", "menu")],
@@ -23,10 +22,11 @@ bot.start((ctx) => {
 });
 
 bot.help((ctx) => {
-    ctx.reply("Hướng dẫn đặt món ăn: \n1. Chọn món ăn từ menu . \n2. Ấn giỏ hàng để xem chi tiết các món đã đặt. \n3. Nhập thông tin của bạn để đặt món.");
+    ctx.reply("Hướng dẫn đặt món ăn: \n1. Chọn món ăn từ menu. \n2. Ấn giỏ hàng để xem chi tiết các món đã đặt. \n3. Nhập thông tin của bạn để đặt món.");
 })
 
 bot.action("menu", (ctx) => {
+    ctx.answerCbQuery();
     ctx.reply("Đây là menu của chúng tôi: ")
     setTimeout(() => {
         ctx.replyWithPhoto("https://incucdep.com/wp-content/uploads/2019/03/mau-thiet-ke-menu-bang-phan1.jpg");
