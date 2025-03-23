@@ -11,18 +11,19 @@ bot.start((ctx) => {
         {
             caption: `Chào mừng bạn đến với bot đặt món ăn! 🍔🍟🍕
             
-                Để xem menu, hãy ấn vào nút bên dưới.
+                    Để xem menu, hãy ấn vào nút bên dưới.
             `,
             parse_mode: "Markdown",
             reply_markup: Markup.inlineKeyboard([
                 [Markup.button.callback("Xem menu", "menu")],
-            ])
+                [Markup.button.url("Truy cập website", "https://qr-order-app.vercel.app/")],
+            ]),
         }
     )
 });
 
 bot.help((ctx) => {
-    ctx.reply("Hướng dẫn đặt món ăn: \n1. Chọn món ăn từ menu . \n2 Ấn giỏ hàng để xem chi tiết các món đã đặt. \n3. Nhập thông tin của bạn để đặt món.");
+    ctx.reply("Hướng dẫn đặt món ăn: \n1. Chọn món ăn từ menu . \n2. Ấn giỏ hàng để xem chi tiết các món đã đặt. \n3. Nhập thông tin của bạn để đặt món.");
 })
 
 bot.action("menu", (ctx) => {
