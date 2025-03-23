@@ -27,7 +27,9 @@ bot.help((ctx) => {
 
 bot.action("menu", (ctx) => {
     ctx.reply("Đây là menu của chúng tôi: ")
-    setTimeout(ctx.replyWithPhoto("https://incucdep.com/wp-content/uploads/2019/03/mau-thiet-ke-menu-bang-phan1.jpg"), 3000)
+    setTimeout(() => {
+        ctx.replyWithPhoto("https://incucdep.com/wp-content/uploads/2019/03/mau-thiet-ke-menu-bang-phan1.jpg");
+    }, 3000);
 })
 
 // Khởi chạy bot
