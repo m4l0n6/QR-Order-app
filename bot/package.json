@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^16.4.7",
+    "pm2": "^6.0.5",
     "telegraf": "^4.16.3"
   }
 }

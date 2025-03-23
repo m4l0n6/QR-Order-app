@@ -14,8 +14,8 @@ bot.start((ctx) => {
 👉 Để xem menu, hãy ấn vào nút bên dưới.`,
             parse_mode: "Markdown",
             reply_markup: Markup.inlineKeyboard([
-                [Markup.button.callback("Xem menu", "menu")],
-                [Markup.button.url("Truy cập website", "https://qr-order-app.vercel.app/")],
+                Markup.button.callback("Xem menu", "menu"),
+                Markup.button.url("Truy cập website", "https://qr-order-app.vercel.app/"),
             ]),
         }
     )
